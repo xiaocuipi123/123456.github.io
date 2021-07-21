@@ -1,516 +1,85 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-
+﻿<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>分享日常小技巧</title>
-
-    <!-- 设置网站的图标 -->
-    <LINK href="favicon.ico" rel="SHORTCUT ICON">
-
-    <!-- Bootstrap -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/index.css" rel="stylesheet">
-    <link href="./css/autoComplet.css" rel="stylesheet">
-    <!-- <link href="./css/index-white.css" rel="stylesheet"> -->
-
+    <meta name="Author" content="Noah">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="favicon" href="favicon.ico">
+    <title>自己的导航页</title>
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+    <style>@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_1706200_3sgw4esvyq9.eot?t=1584846914425);src:url(//at.alicdn.com/t/font_1706200_3sgw4esvyq9.eot?t=1584846914425#iefix) format('embedded-opentype'),url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPcAAsAAAAACEAAAAOQAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqDVIMaATYCJAMUCwwABCAFhG0HUhswBxEVnPHIfiZkcgn7O+8oo66bEbK2OpSJxjfBA+X1vslMtll8iBW0KuzdSry1J/JGpwASAA0EaO7O95urXT4WOkKV5Nojj7b4hwrpy2SO/v97p78xLfvYuvYslzWHLex8DDAOpEDHnGQljg3TC+cUPEjbIQAHqRRD1GvQzI2BgvQTgBjYr083jJQNVcMRGEZbyVSVKhajY2hztCvAIv178YYywgANXUJ2atW7fk9qmZi1ZMCSjnILC8fbDUAHJFAMUCCGl/oGIm2uGBKHP1RRC3BgoKGZmLxVUbOWZcWqHRkc9A8PBBKFBsIGKXUBUAvlFZhwBAGmhiDBLIqgwKyVRwPuKwAOWAjCWUxL9mpIWOWKcikVmuwiF0+49sx9/bnn5gvfDdO/at6eQHTP5dHLd8Z6V67btSPG061Q523w0S5OzYETx4QbT9zXbnmuP/bdvOsL9lwR2D031utePndvMM7nXRncNy/G4xvlEveE69fc4Tdu+AbcnOdxa4E98/bFyZV75+5WxGRRnfY0cEulpaqbVCzNtxTEU1P1m2J4tFGwJ7VcytpevcrWOXd44oCjAyZu3DXRvQxryi09PV2/BcVQIlRxZPWvAFhMXkb1qQ3bHPFvOVXxWI1TjTLPFjtT5smFsAtxVqK82CcvekwcsbMOHDh4wOBxYw4eZI+NVR+A6Vmx4bGz1ZI0XFw1r0mlXm20lW5RpWd+s0u/ijYZwarmHJsZVi+tXKjMlU2rm186Hlk6tFxaPfwAWLPk3380K2u4Qm6xtmaprTL4b/dj0Nu/F+qwat8MpwLgzvpfdbSsPbbVBj9Ijy//kxa1tAb7qAqUxK4rT8490qpVpxGATiESBDT4aTX/LxTJg3H0MbPIZMAgJgaNIqSAxCCbpGjFQMdJObBhUBMcFKXhbCdRDEcilB0oZAYAQTiHQCOU4yAJ5ypJ0e6DTizvwEa4kODAK6KWdJIrLP1uHgWtYqDuj3zPi2FOvTHlb7BpaiWp1NwvSPRJKrMiW3zFAhljRPy2laohIzzTC9gN08S0Cgf0mjnV9ZLnpuxDWc/z5oZHQasYqPsj3/NiZGO9yX3/DTZNrdQQ+qJfkOjbpzIrWpBedUsrwrXcEr9tpWrICM/0AjyYaI5pLe8U0GvmemTWS47qmba6bH7D/IybAAdkZV1oQgoldGHjYViCYPl3WKxb86g+On/sE/+kc/CLtS1vNg==') format('woff2'),url(//at.alicdn.com/t/font_1706200_3sgw4esvyq9.woff?t=1584846914425) format('woff'),url(//at.alicdn.com/t/font_1706200_3sgw4esvyq9.ttf?t=1584846914425) format('truetype'),url(//at.alicdn.com/t/font_1706200_3sgw4esvyq9.svg?t=1584846914425#iconfont) format('svg')}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-querenzhengque:before{content:"\e600"}.icon-tishi:before{content:"\e640"}.icon-cuowu:before{content:"\e602"}.icon-jinggao:before{content:"\e62b"}*{box-sizing:border-box;margin:0;padding:0;font-weight:300}body,body ::-webkit-input-placeholder{font-family:Source Sans Pro,sans-serif;color:#fff;font-weight:300}body :-moz-placeholder,body ::-moz-placeholder{font-family:Source Sans Pro,sans-serif;color:#fff;opacity:1;font-weight:300}body :-ms-input-placeholder{font-family:Source Sans Pro,sans-serif;color:#fff;font-weight:300}a{text-decoration:none}.wrapper{background: #01a982; background: linear-gradient(to bottom right,#01a982 0,#60ae80 100%); overflow: hidden;}.bg-bubbles,.wrapper{position:absolute;left:0;width:100%;}.bg-bubbles{top:0;z-index:1}.bg-bubbles li{position:absolute;list-style:none;display:block;width:40px;height:40px;background-color:hsla(0,0%,100%,.15);bottom:-160px;animation:square 25s infinite;transition-timing-function:linear}.bg-bubbles li:nth-child(1){left:10%}.bg-bubbles li:nth-child(2){left:20%;width:80px;height:80px;animation-delay:2s;animation-duration:17s}.bg-bubbles li:nth-child(3){left:25%;animation-delay:4s}.bg-bubbles li:nth-child(4){left:40%;width:60px;height:60px;animation-duration:22s;background-color:hsla(0,0%,100%,.25)}.bg-bubbles li:nth-child(5){left:70%}.bg-bubbles li:nth-child(6){left:80%;width:120px;height:120px;animation-delay:3s;background-color:hsla(0,0%,100%,.2)}.bg-bubbles li:nth-child(7){left:32%;width:160px;height:160px;animation-delay:7s}.bg-bubbles li:nth-child(8){left:55%;width:20px;height:20px;animation-delay:15s;animation-duration:40s}.bg-bubbles li:nth-child(9){left:25%;width:10px;height:10px;animation-delay:2s;animation-duration:40s;background-color:hsla(0,0%,100%,.3)}.bg-bubbles li:nth-child(10){left:90%;width:160px;height:160px;animation-delay:11s}@keyframes square{0%{transform:translatey(0)}to{transform:translatey(-700px) rotate(600deg)}}@media (max-width:500px){.container h1{font-size:60px}form button,form input{width:500px}}.main{padding:50px 0;z-index:999;position:relative}.main h1{font-size:40px;text-align:center;color:#fff;margin-bottom:30px;text-transform:uppercase}.content{margin:0 auto;width:28%;background:#fff;border-radius:5px}p.footer{font-size:16px;text-align:center;color:#fff;font-weight:500;margin-top:30px}p.footer a{color:#55acee}p.footer a:hover{color:#000;transition:.5s all;-webkit-transition:.5s all;-moz-transition:.5s all;-o-transition:.5s all;-ms-transition:.5s all}.content-top h2{font-size:22px;color:#fff;text-align:center;background:#02a982;padding:12px 0;border-radius:5px}.content-top p{text-align:center;font-size:16px;color:#000;margin-top:15px}.content-top ul li{display:block;font-size:15px;color:#000;line-height:1.8em;padding:1em 0 1em 1em;border-bottom:1px solid #e2e0de}.content-top ul li a{color:#000;font-weight:400}.content-top ul li a i{color:#02a982;font-style:normal;display:block;margin:2px 0}.content-top ul li span{display:block;color:#999}.content-top{padding:1.5em}.content-top p a{color:#55acee;margin-left:5px}@media (max-width:1366px){.content{width:31%}}@media (max-width:1280px){.content{width:32%}}@media (max-width:1080px){.content{width:38%}.main h1{font-size:36px}.content-top h2{font-size:20px;padding:10px 0}.content-top p,.content-top ul li,p.footer{font-size:14px}}@media (max-width:800px){.main h1{font-size:34px}.content{width:46%}}@media (max-width:768px){.main{padding:90px 0}.main h1{margin-bottom:55px}p.footer{margin-top:75px}}@media (max-width:736px){.main{padding:70px 0}.main h1{margin-bottom:45px}.content{width:53%}p.footer{margin-top:50px}}@media (max-width:667px){.main h1{font-size:32px;margin-bottom:35px}.main{padding:60px 0}.content{width:57%}.content-top h2{font-size:18px}}@media (max-width:600px){.main h1{font-size:30px}.content-top{padding:1em}.content{width:62%}}@media (max-width:568px){.content{width:68%}}@media (max-width:480px){.content{width:78%}.main h1{font-size:28px}p.footer{margin-top:42px}}@media (max-width:414px){.content-top h2{font-size:16px}.content{width:85%}.main{padding:50px 0}p.footer{line-height:1.8em;margin:42px auto 0;width:85%}}@media (max-width:384px){.main h1{font-size:27px}.content,p.footer{width:90%}p.footer{margin:32px auto 0}}@media (max-width:375px){.main h1{font-size:26px;margin-bottom:25px}.main{padding:45px 0}.content,p.footer{width:92%}.content-top h2{padding:8px 0}}@media (max-width:320px){.main h1{font-size:24px;margin-bottom:30px}.content-top ul li{padding:1em 0 1em 1em;background-size:13%!important}.content-top{padding:1.2em}.content-top p,.content-top ul li,p.footer{font-size:13px}.content,p.footer{width:90%}}@media(max-width:500px){.bg-bubbles, .wrapper{height:auto;}}</style>
 </head>
+<body >
+    <div id="all">
+        <div class="wrapper">
+            <div class="main">
+				<h1>地址发布页</h1>
+				<div class="content">
+					<div class="content-top">				
+							<h2>请 Ctrl+D 收藏本页到浏览器收藏夹</h2>
+							<ul>
+								<li>
+									Goodguy
+									<a href="https://www.likixi.com" target="_blank"><i>https://www.likixi.com</i></a>
+									
+								</span></span></li>
+								<li>
+									哔哩哔哩 (゜-゜)つロ 干杯~-bilibili
+									<a href="https://www.bilibili.com/" target="_blank"><i>https://www.bilibili.com/</a>
+									
+								</span></span></li>
+								<li>
+									百度贴吧
+									<a href="https://tieba.baidu.com/index.html" target="_blank"><i>https://tieba.baidu.com/index.html</i></a>
+									
+								</span></span></li>
+								<li>
+									成为一个GoodGuy-个人网站
+									<a href="https://www.likixi.com" target="_blank"><i>https://www.likixi.com/</i></a>
+									
+								</span></span></li>
+								<li>
+									Youtube
+									<a href="https://www.youtube.com/" target="_blank"><i>https://www.youtube.com/</i></a>
+								</span></span></li>
+								<li>
+									Youtube
+									<a href="https://www.youtube.com/" target="_blank"><i>https://www.youtube.com/</i></a>
+								</span></span></li>
+								<li>
+									Youtube
+									<a href="https://www.youtube.com/" target="_blank"><i>https://www.youtube.com/</i></a>
+								</span></span></li>
+								<li>
+									Youtube
+									<a href="https://www.youtube.com/" target="_blank"><i>https://www.youtube.com/</i></a>
+								</span></span></li>
+								
+								<li>
+                                <span>近期部分国产浏览器屏蔽网址，电脑请安装<a href="https://www.google.cn/chrome/" target="_blank">chrome浏览器</a>访问，手机请安装<a href="https://www.xbext.com/" target="_blank">X浏览器</a>访问。<span>
+							</ul>
 
-<body onresize="setDivSize()">
-    <div class="container-fluid">
-        <div class="row" style="overflow: hidden;">
-
-            <!-- 导航栏-开头 -->
-            <div class="col-lg-12">
-                <nav class="navbar navbar-inverse navbar-fixed-top">
-                    <div class="container-fluid">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <a class="navbar-brand" href="index.html" onclick="">分享日常小技巧</a>
-                        </div>
-
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <div class="navbar-form navbar-left">
-                                <div class="form-group">
-                                    <div id='app'>
-                                        <input type="text" id="keyword" class="form-control" style="width: 200px;"
-                                            autofocus autocomplete="off" placeholder="搜索:Enter  设焦点：ctrl+x"
-                                            v-model="myKeyword" @input="sendJsonP(myKeyword)" @keyup.up="index_sub()"
-                                            @keyup.down="index_add()" @keyup.enter="setAndSearch()"
-                                            @keyup.esc="hidePanel()" @blur="hidePanel()">
-
-                                        <div class="auto_hidden" id="auto">
-                                            <div class="list-group">
-                                                <a href="#" class="list-group-item"
-                                                    :class="{active: index == is_Active}" v-for="(item,index) in result"
-                                                    @click="getIndex(index)">{{item}}</a></div>
-                                            <!--自动完成 DIV-->
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 搜索按钮 -->
-                                <div class="btn-group" id="dropdown_btn_div">
-                                    <button id="dropdown_btn" type="button" class="btn btn-default dropdown-toggle"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="caret"></span>
-                                        <span class="sr-only">Toggle Dropdown</span>
-                                    </button>
-                                    <button type="button" id="searchBtn" class="btn btn-default"
-                                        onclick="activeSearchWord(default_search_type,'yes')">搜索</button>
-                                    <!-- 修改关键词 -->
-                                    <ul class="dropdown-menu">
-                                        <li><a href="javascript:void(0);" onclick="keywordTransform(this.id)"
-                                                id="add_quotest">+ 引号<span class="addword_btn_style"> CS5</span></a>
-                                        </li>
-                                        <li><a href="javascript:void(0);" onclick="keywordTransform(this.id)"
-                                                id="pan_keyword">+ 网盘词<span class="addword_btn_style"> CS6</span></a>
-                                        </li>
-                                        <li><a href="javascript:void(0);" onclick="keywordTransform(this.id)"
-                                                id="ebook_keyword">+ 书籍词<span class="addword_btn_style"> CS7</span></a>
-                                        </li>
-                                        <li><a href="javascript:void(0);" onclick="keywordTransform(this.id)"
-                                                id="music_keyword">+ 音乐词<span class="addword_btn_style"> CS8</span></a>
-                                        </li>
-                                        <li><a href="javascript:void(0);" onclick="keywordTransform(this.id)"
-                                                id="movie_keyword">+ 视频词<span class="addword_btn_style"> CS9</span></a>
-                                        </li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">快捷键:ctrl+shift+a</a></li>
-                                    </ul>
-                                </div>
-
-                                <!-- 选择使用单搜、双搜、三搜 -->
-                                <div class="btn-group" id="search_type_div">
-                                    <button type="button" id="search_type" class="btn btn-default dropdown-toggle"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span id="btn_text">单搜</span> <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="javascript:void(0);" id="one_engine"
-                                                onclick="changeLayout(this.id)">单搜 <span class="addword_btn_style">
-                                                    ctrl+alt+6</span></a></li>
-                                        <li><a href="javascript:void(0);" id="two_engine"
-                                                onclick="changeLayout(this.id)">双搜 <span class="addword_btn_style">
-                                                    ctrl+alt+7</span></a></li>
-                                        <li><a href="javascript:void(0);" id="three_engine"
-                                                onclick="changeLayout(this.id)">三搜 <span class="addword_btn_style">
-                                                    ctrl+alt+8</span></a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">快捷键:ctrl+alt+a</a></li>
-                                    </ul>
-                                </div>
-
-                                <!-- 选择搜索引擎-1 -->
-                                <div class="btn-group" id="select_iframe_engine_1">
-                                    <button type="button" id="select_iframe_engine_btn_1"
-                                        class="btn btn-selectEngine dropdown-toggle" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        <span id="selectEngine_current_1">百度</span> <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu selectEngine_style">
-                                        <li><a href="javascript:void(0);" id="selectEngine_baidu_1"
-                                                onclick="changeIframeSrc(this.id)">百度</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_bing_1"
-                                                onclick="changeIframeSrc(this.id)">必应</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_mijisou_1"
-                                                onclick="changeIframeSrc(this.id)">秘迹</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_shenma_1"
-                                                onclick="changeIframeSrc(this.id)">神马</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_magi_1"
-                                                onclick="changeIframeSrc(this.id)">magi</a></li>
-		   <li><a href="javascript:void(0);" id="selectEngine_magi_1"
-                                                onclick="changeIframeSrc(this.id)">magi</a></li>
-<li><a href="javascript:void(0);" id="selectEngine_magi_2"
-                                                onclick="changeIframeSrc(this.id)">magi</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_bilibili_1"
-                                                onclick="changeIframeSrc(this.id)">哔哩</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_sogouzhihu_1"
-                                                onclick="changeIframeSrc(this.id)">知乎</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_sogouweixin_1"
-                                                onclick="changeIframeSrc(this.id)">微信</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_weibo_1"
-                                                onclick="changeIframeSrc(this.id)">微博</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_sowangpan_1"
-                                                onclick="changeIframeSrc(this.id)">网盘</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_soyinyue_1"
-                                                onclick="changeIframeSrc(this.id)">音乐</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_sodianying_1"
-                                                onclick="changeIframeSrc(this.id)">电影</a></li>
-                                        <!-- <li role="separator" class="divider"></li> -->
-                                        <!-- <li><a href="#">快捷键:ctrl+alt+a</a></li> -->
-                                    </ul>
-                                </div>
-
-                                <!-- 选择搜索引擎-2 -->
-                                <div class="btn-group" id="select_iframe_engine_2">
-                                    <button type="button" id="select_iframe_engine_btn_2"
-                                        class="btn btn-selectEngine dropdown-toggle" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        <span id="selectEngine_current_2">必应</span> <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu selectEngine_style">
-                                        <li><a href="javascript:void(0);" id="selectEngine_baidu_2"
-                                                onclick="changeIframeSrc(this.id)">百度</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_bing_2"
-                                                onclick="changeIframeSrc(this.id)">必应</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_mijisou_2"
-                                                onclick="changeIframeSrc(this.id)">秘迹</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_shenma_2"
-                                                onclick="changeIframeSrc(this.id)">神马</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_magi_2"
-                                                onclick="changeIframeSrc(this.id)">magi</a></li>
-<li><a href="javascript:void(0);" id="selectEngine_magi_2"
-                                                onclick="changeIframeSrc(this.id)">magi</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_bilibili_2"
-                                                onclick="changeIframeSrc(this.id)">哔哩</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_sogouzhihu_2"
-                                                onclick="changeIframeSrc(this.id)">知乎</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_sogouweixin_2"
-                                                onclick="changeIframeSrc(this.id)">微信</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_weibo_2"
-                                                onclick="changeIframeSrc(this.id)">微博</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_sowangpan_2"
-                                                onclick="changeIframeSrc(this.id)">网盘</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_soyinyue_2"
-                                                onclick="changeIframeSrc(this.id)">音乐</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_sodianying_2"
-                                                onclick="changeIframeSrc(this.id)">电影</a></li>
-                                        <!-- <li role="separator" class="divider"></li>
-                                        <li><a href="#">快捷键:ctrl+alt+a</a></li> -->
-                                    </ul>
-                                </div>
-
-                                <!-- 选择搜索引擎-3 -->
-                                <div class="btn-group" id="select_iframe_engine_3">
-                                    <button type="button" id="select_iframe_engine_btn_3"
-                                        class="btn btn-selectEngine dropdown-toggle" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        <span id="selectEngine_current_3">秘迹</span> <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu selectEngine_style">
-                                        <li><a href="javascript:void(0);" id="selectEngine_baidu_3"
-                                                onclick="changeIframeSrc(this.id)">百度</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_bing_3"
-                                                onclick="changeIframeSrc(this.id)">必应</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_mijisou_3"
-                                                onclick="changeIframeSrc(this.id)">秘迹</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_shenma_3"
-                                                onclick="changeIframeSrc(this.id)">神马</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_magi_3"
-                                                onclick="changeIframeSrc(this.id)">magi</a></li>
- <li><a href="javascript:void(0);" id="selectEngine_magi_3"
-                                                onclick="changeIframeSrc(this.id)">magi</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_bilibili_3"
-                                                onclick="changeIframeSrc(this.id)">哔哩</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_sogouzhihu_3"
-                                                onclick="changeIframeSrc(this.id)">知乎</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_sogouweixin_3"
-                                                onclick="changeIframeSrc(this.id)">微信</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_weibo_3"
-                                                onclick="changeIframeSrc(this.id)">微博</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_sowangpan_3"
-                                                onclick="changeIframeSrc(this.id)">网盘</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_soyinyue_3"
-                                                onclick="changeIframeSrc(this.id)">音乐</a></li>
-                                        <li><a href="javascript:void(0);" id="selectEngine_sodianying_3"
-                                                onclick="changeIframeSrc(this.id)">电影</a></li>
-                                        <!-- <li role="separator" class="divider"></li>
-                                        <li><a href="#">快捷键:ctrl+alt+a</a></li> -->
-                                    </ul>
-                                </div>
-
-
-                            </div>
-
-                            <!-- 导航最高为50px，超过的不显示 -->
-                            <div style="max-height:50px;overflow:hidden">
-                                <ul class="nav navbar-nav" id="motto">
-                                    <li>
-                                        <iframe style="position:relative;top:5px" allowtransparency="true"
-                                            frameborder="0" width="180" height="36" scrolling="no"
-                                            src="https://tianqi.2345.com/plugin/widget/index.htm?s=3&z=2&t=0&v=0&d=3&bd=0&k=&f=808080&ltf=808080&htf=808080&q=1&e=1&a=1&c=72046&w=180&h=36&align=left"></iframe>
-                                    </li>
-                                    <li>
-                                        <div class="top_div" id="top_div">
-                                            <div class="disc_text">
-                                                <div id="saying" title="伸手摘星，即使徒劳无功，也不至于一手淤泥。" onclick="setSaying()">
-                                                    伸手摘星，即使徒劳无功，也不至于一手淤泥。
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <!-- 导航栏-结尾 -->
-
+							
+					</div>
+				</div>
+				<p class="footer">© 2020 GoodGuy. All Rights Reserved</p>
+			</div>	
+            <ul class="bg-bubbles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
-
-        <div class="row" style="height:100vh;width:100vw-50px;">
-            <!-- 左侧-开头 -->
-            <div id="leftPanel" class="col-xs-2 col-sm-2 col-md-2 col-lg-1 scrollStyle"
-                style="padding: 0px;  height: 100%; overflow:auto;">
-
-                <ul class="nav navbar-inverse nav-stacked .navbar-fixed-top">
-                    <li role="presentation" id="bar-2">
-
-                        <!-- 分组_搜索引擎_开头 -->
-                        <a href="#Collapse_searchEngine" class="nav-header" data-toggle="collapse"
-                            id="collapseParent_searchEngine" aria-expanded="true">搜索引擎 <span
-                                class="shortCutKey_green_style">CA+1</span>
-                            <span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
-
-                        <!-- 搜索引擎列表_开头 -->
-                        <ul id="Collapse_searchEngine" class="nav nav-list collapse in">
-                            <!-- 百度搜索 -->
-                            <li>
-                                <a href="link" id="baidu" onclick="leftPanel_searchWord(this.id)"
-                                    class="engine_btn_style" rel="https://www.baidu.com/s?wd={word}"
-                                    target="main_Frame">百度搜索 <span class="shortCutKey_style">CA+y</span>
-                                </a>
-                            </li>
-
-                            <!-- 谷歌搜索 -->
-                            <li>
-                                <a href="link" id="google" onclick="leftPanel_searchWord(this.id)"
-                                    class="engine_btn_style"
-                                    rel="https://www.google.com/search?source=hp&ei=KNEnWqOFIIGu0gS2zZzYDQ&q={word}"
-                                    target="_blank">谷歌搜索 <span class="shortCutKey_style">CA+u</span>
-                                </a>
-                            </li>
-
-                            <!-- 必应搜索 -->
-                            <li>
-                                <a href="link" id="bing" onclick="leftPanel_searchWord(this.id)"
-                                    class="engine_btn_style" rel="https://cn.bing.com/search?q={word}"
-                                    target="main_Frame">必应搜索 <span class="shortCutKey_style">CA+i</span>
-                                </a>
-                            </li>
-
-                            <!-- 秘迹搜索 -->
-                            <li>
-                                <a href="link" id="mijisou" onclick="leftPanel_searchWord(this.id)"
-                                    class="engine_btn_style" rel="https://mijisou.com/?q={word}"
-                                    target="main_Frame">秘迹搜索 <span class="shortCutKey_style">CA+o</span>
-                                </a>
-                            </li>
- <!-- 秘迹搜索 -->
-                            <li>
-                                <a href="link" id="mijisou" onclick="leftPanel_searchWord(this.id)"
-                                    class="engine_btn_style" rel="https://mijisou.com/?q={word}"
-                                    target="main_Frame">秘迹搜索 <span class="shortCutKey_style">CA+o</span>
-                                </a>
-                            </li>
-
-                            <!-- 神马搜索 -->
-                            <li>
-                                <a href="link" id="shenma" onclick="leftPanel_searchWord(this.id)"
-                                    class="engine_btn_style" rel="https://so.m.sm.cn/s?q={word}"
-                                    target="main_Frame">神马搜索 <span class="shortCutKey_style">CA+p</span>
-                                </a>
-                            </li>
-
-                            <!-- magi搜索 -->
-                            <li>
-                                <a href="link" id="magi" onclick="leftPanel_searchWord(this.id)"
-                                    class="engine_btn_style" rel="https://magi.com/search?q={word}"
-                                    target="main_Frame">magi搜索 <span class="shortCutKey_style">CA+[</span>
-                                </a>
-                            </li>
-		
-		   <!-- magi搜索 -->
-		 <li>
-                                <a href="link" id="magi" onclick="leftPanel_searchWord(this.id)"
-                                    class="engine_btn_style" rel="https://magi.com/search?q={word}"
-                                    target="main_Frame">magi搜索 <span class="shortCutKey_style">CA+[</span>
-                                </a>
-                            </li>
-
-
-                        </ul>
-                        <!-- 搜索引擎列表_结尾 -->
-                        <!-- 分组_搜索引擎_结尾 -->
-
-
-                        <!-- 分组_常用网站_开头 -->
-                        <a href="#Collapse_commentUse" class="nav-header" data-toggle="collapse"
-                            id="collapseParent_commentUse" aria-expanded="true">常用网站 <span
-                                class="shortCutKey_green_style">CA+2</span>
-                            <span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
-
-                        <!-- 搜索引擎列表_开头 -->
-                        <ul id="Collapse_commentUse" class="nav nav-list collapse in">
-
-                            <!-- 哔哩哔哩 -->
-                            <li>
-                                <a href="link" id="bilibili" onclick="leftPanel_searchWord(this.id)"
-                                    class="engine_btn_style" rel="https://search.bilibili.com/all?keyword={word}"
-                                    target="main_Frame">哔哩哔哩 <span class="shortCutKey_style">CA+h</span>
-                                </a>
-                            </li>
-
-                            <!-- 搜狗知乎-->
-                            <li>
-                                <a href="link" id="sogouzhihu" onclick="leftPanel_searchWord(this.id)"
-                                    class="engine_btn_style"
-                                    rel="https://www.sogou.com/sogou?query={word}&s_from=result_up&insite=zhihu.com"
-                                    target="main_Frame">搜狗知乎
-                                    <span class="shortCutKey_style">CA+j</span>
-                                </a>
-                            </li>
-
-                            <!-- 搜狗微信 -->
-                            <li>
-                                <a href="link" id="sogouweixin" onclick="leftPanel_searchWord(this.id)"
-                                    class="engine_btn_style"
-                                    rel="https://weixin.sogou.com/weixin?type=2&s_from=input&query={word}&ie=utf8"
-                                    target="main_Frame">搜狗微信 <span class="shortCutKey_style">CA+k</span>
-                                </a>
-                            </li>
-
-                            <!-- 微博搜索 -->
-                            <li>
-                                <a href="link" id="weibo" onclick="leftPanel_searchWord(this.id)"
-                                    class="engine_btn_style" rel="https://s.weibo.com/weibo/{word}"
-                                    target="main_Frame">微博搜索 <span class="shortCutKey_style">CA+l</span>
-                                </a>
-                            </li>
-
-                        </ul>
-                        <!-- 搜索引擎列表_结尾 -->
-                        <!-- 分组_常用网站_结尾 -->
-
-                        <!-- 分组_资源搜索_开头 -->
-                        <a href="#Collapse_resource" class="nav-header" data-toggle="collapse"
-                            id="collapseParent_resource" aria-expanded="true">资源搜索 <span
-                                class="shortCutKey_green_style">CA+3</span>
-                            <span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
-
-                        <!-- 搜索引擎列表_开头 -->
-                        <ul id="Collapse_resource" class="nav nav-list collapse in">
-
-                            <!-- 网盘搜索 -->
-                            <li>
-                                <a href="link" id="sowangpan" onclick="leftPanel_searchWord(this.id)"
-                                    class="engine_btn_style" rel="https://www.dashengpan.com/search?keyword={word}"
-                                    target="main_Frame">网盘搜索 <span class="shortCutKey_style">CA+g</span>
-                                </a>
-                            </li>
-
-                            <!-- 音乐搜索 -->
-                            <li>
-                                <a href="link" id="soyinyue" onclick="leftPanel_searchWord(this.id)"
-                                    class="engine_btn_style" rel="http://music.ifkdy.com/?name={word}&type=netease"
-                                    target="main_Frame">音乐搜索
-                                    <span class="shortCutKey_style">CA+b</span>
-                                </a>
-                            </li>
-
-                            <!-- 书籍搜索 -->
-                            <li>
-                                <a href="link" id="soshuji" onclick="leftPanel_searchWord(this.id)"
-                                    class="engine_btn_style" rel="https://www.jiumodiary.com/" target="main_Frame"
-                                    title="这个网站需要自己手动复制关键词来搜索">书籍搜索
-                                    <span class="shortCutKey_style">CA+n</span>
-                                </a>
-                            </li>
-
-                            <!-- 电影搜索 -->
-                            <li>
-                                <a href="link" id="sodianying" onclick="leftPanel_searchWord(this.id)"
-                                    class="engine_btn_style" rel="https://www.cupfox.com/search?key={word}"
-                                    target="main_Frame">在线电影 <span class="shortCutKey_style">CA+m</span>
-                                </a>
-                            </li>
-                            <!-- 浏览器尺寸缩小的时候，最下面的内容显示不全，所以加个换行 -->
-                            <br />
-                            <br />
-                            <br />
-                        </ul>
-                        <!-- 搜索引擎列表_结尾 -->
-                        <!-- 分组_常用网站_结尾 -->
-                </ul>
-            </div>
-            <!-- 左侧-结尾 -->
-
-
-            <!-- 右侧-开头 -->
-            <div id="rightPanel" class="col-xs-10 col-sm-10 col-md-11 col-lg-11"
-                style="padding-right:14px; height: 100%; overflow:hidden;">
-
-                <!-- 一个引擎 -->
-                <div class="row" style="padding: 0px; " id="one_engine_panel">
-                    <div class="col-md-12" style="padding: 0px; height: 100vh;">
-                        <iframe src="defaultPage.html" id="mainWindow" name="main_Frame" width="100%" height="100%"
-                            scrolling="auto" frameborder="0" class="scrollStyle">
-                        </iframe>
-                    </div>
-                </div>
-                <!-- /一个引擎 -->
-
-                <!-- 两个引擎 -->
-                <div class="row" style="padding: 0px;" id="two_engine_panel">
-                    <div class="col-md-6" style="padding: 0px; height: 100vh;">
-                        <iframe src="simpleHtml.html" id="two_left_window" name="main_Frame" width="100%" height="100%"
-                            scrolling="auto" frameborder="0" class="scrollStyle">
-                        </iframe>
-                    </div>
-                    <div class="col-md-6" style="padding: 0px; height:100vh;">
-                        <iframe src="simpleHtml.html" id="two_right_window" name="main_Frame" width="100%" height="100%"
-                            scrolling="auto" frameborder="0" class="scrollStyle">
-                        </iframe>
-                    </div>
-                </div>
-                <!-- /两个引擎 -->
-
-                <!-- 三个引擎 -->
-                <div class="row" style="padding: 0px;" id="three_engine_panel">
-                    <div class="col-md-4" style="padding: 0px; height: 100vh ;">
-                        <iframe src="simpleHtml.html" id="three_left_window" name="main_Frame" width="100%"
-                            height="100%" scrolling="auto" frameborder="0" class="scrollStyle">
-                        </iframe>
-                    </div>
-                    <div class="col-md-4" style="padding: 0px; height:100vh;">
-                        <iframe src="simpleHtml.html" id="three_middle_window" name="main_Frame" width="100%"
-                            height="100%" scrolling="auto" frameborder="0" class="scrollStyle">
-                        </iframe>
-                    </div>
-                    <div class="col-md-4" style="padding: 0px; height:100vh;">
-                        <iframe src="simpleHtml.html" id="three_right_window" name="main_Frame" width="100%"
-                            height="100%" scrolling="auto" frameborder="0" class="scrollStyle">
-                        </iframe>
-                    </div>
-                </div>
-                <!-- /三个引擎 -->
-
-            </div>
-            <!-- 右侧-结尾 -->
-
-        </div>
-        <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script> -->
-        <script src="./js/jquery.min.js"></script>
-
-        <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script> -->
-        <script type="text/javascript" src="./js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="./js/transformCharacter.js"></script>
-        <script type="text/javascript" src="./js/vue.min.js"></script>
-        <script type="text/javascript" src="./js/vue-resource.min.js"></script>
-        <script type="text/javascript" src="./js/getSaying.js"></script>
-        <script type="text/javascript" src="./js/index.js"></script>
-        <script type="text/javascript" src="./js/shortcutKey.js"></script>
-        <script type="text/javascript" src="./js/adjustSize.js"></script>
-        <script type="text/javascript" src="./js/autoComplet.js"></script>
+    </div>
 </body>
-
 </html>
